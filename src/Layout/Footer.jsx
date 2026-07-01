@@ -1,4 +1,5 @@
 import "./Footer.css"
+import Footer from "./Layout/Footer";
 import logo from "../assets/Food Logo.png"
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
