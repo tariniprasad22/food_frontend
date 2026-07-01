@@ -6,13 +6,11 @@ const Bookings = () => {
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // =======================
-  // Get All Bookings
-  // =======================
+
   const getBookings = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8800/api/table/get-all"
+        "https://food-backend-oo9y.onrender.com/api/table/get-all"
       );
 
       console.log(response.data);
@@ -34,9 +32,7 @@ const Bookings = () => {
     getBookings();
   }, []);
 
-  // =======================
-  // Delete Booking
-  // =======================
+ 
   const handleDelete = async (id) => {
     const confirmDelete = window.confirm(
       "Are you sure you want to delete this booking?"
@@ -46,7 +42,7 @@ const Bookings = () => {
 
     try {
       const response = await axios.delete(
-        `http://localhost:8800/api/table/delete/${id}`,
+        `https://food-backend-oo9y.onrender.com/api/table/delete/${id}`,
         {
           withCredentials: true,
         }

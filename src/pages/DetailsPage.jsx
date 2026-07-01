@@ -12,7 +12,7 @@ const Navigate = useNavigate()
     const getSingleFood = async () => {
         try {
             const response = await axios.get(
-                `http://localhost:8800/api/food/get-single/${id}`
+                `https://food-backend-oo9y.onrender.com/api/food/get-single/${id}`
             );
 
             setFood(response.data.food);
